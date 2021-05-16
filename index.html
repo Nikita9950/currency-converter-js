@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="icon" type="image/svg+xml" href="favicon.svg">
+	<title>CURRENCY CONVERTER</title>
+
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<noscript>You need to enable JavaScript to run this app.</noscript>
+		<h1>Currency Converter</h1>
+		<div class="courses">
+			<div class="courses__item">
+				<div>USD</div>
+				<div class="" data-value="USD"></div>
+			</div>
+			<div class="courses__item">
+				<div>EUR</div>
+				<div class="" data-value="EUR"></div>
+			</div>
+			<div class="courses__item">
+				<div>GBP</div>
+				<div class="" data-value="GBP"></div>
+			</div>
+		</div>
+		<div class="get-convert">
+			<div class="get-convert__data-input">
+				<div id="get-convert__input-wrapper" class="get-convert__input-wrapper-uah"><input autofocus id="input"
+						type="text" placeholder="Enter the amount"></div>
+				<select id="select">
+					<option value="UAH">UAH</option>
+					<option value="USD">USD</option>
+					<option value="EUR">EUR</option>
+					<option value="GBP">GBP</option>
+				</select>
+			</div>
+			<div class="get-convert__data-output">
+				<div><span>USD:</span><input disabled id="resultSumUSD" type="text"></div>
+				<div><span>EUR:</span><input disabled id="resultSumEUR" type="text"></div>
+				<div><span>GBP:</span><input disabled id="resultSumGBP" type="text"></div>
+				<div><span>UAH:</span><input disabled id="resultSumUAH" type="text"></div>
+			</div>
+		</div>
+		<p class="copyright">© Liubimov Nikita 2021</p>
+	</div>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

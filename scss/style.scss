@@ -1,0 +1,212 @@
+@import "reset.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+%pseudo-flag{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 64px;
+  height: 43px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px -1px rgb(0, 0, 0);
+}
+
+@keyframes shadow{
+  0%{
+    box-shadow: 0px 0px 7px 1px rgba(66,164,157,1);
+  }
+  50%{
+    box-shadow: 0px 0px 20px 1px rgba(66,164,157,1);
+  }
+  100%{
+    box-shadow: 0px 0px 5px 1px rgba(66,164,157,1);
+  }
+}
+
+
+
+
+html{
+  background: #d4c7b9;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
+
+h1{
+  text-align: center;
+  padding: 10px 0 30px 0;
+  font-size: 31px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.wrapper{
+  box-sizing: border-box;
+  width: 470px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  background-color: #c05555;
+  border-radius: 10px;
+  animation-name: shadow;
+  animation-duration: 2500ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  background: radial-gradient(circle at 50% 50%, rgba(146, 184, 184, 1) 0%, rgba(66,164,157,1) 60%);
+}
+
+.courses{
+  display: flex;
+  justify-content: space-between;
+  &__item{
+    text-align: center;
+    width: 30%;
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    // border: 1px solid rgb(138, 136, 136);
+    background: #55a7c0;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 #4058a8;
+    font-size: 20px;
+    transition: 100ms all linear;
+    cursor: context-menu;
+  }
+  &__item:hover{
+    transform: scale(1.1);
+  }
+
+}
+
+.get-convert{
+  text-align: center;
+  padding: 50px 20px;
+  &__data-input{
+    display: flex;
+    justify-content: space-around;
+  }
+  #input{
+    width: 70%;
+    height: 43px;
+    border: 0;
+    outline: 0;
+    font-size: 17px;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 7px 0 7px; 
+    background: rgb(236, 230, 230);
+    box-shadow: 1px 1px 4px -1px rgb(0, 0, 0);
+  }
+  .get-convert__input-wrapper-uah{
+    padding-left: 70px;
+    position: relative;
+    &::before{
+      @extend %pseudo-flag;
+      background: url('../img/css_sprites.png') -0 -10px no-repeat;
+      
+    }
+  }
+  .get-convert__input-wrapper-usd{
+    padding-left: 70px;
+    position: relative;
+    &::before{
+      @extend %pseudo-flag;
+      background: url('../img/css_sprites.png') -0 -74px no-repeat;
+      
+    }
+  }
+  .get-convert__input-wrapper-eur{
+    padding-left: 70px;
+    position: relative;
+    &::before{
+      @extend %pseudo-flag;
+      background: url('../img/css_sprites.png') -0 -202px no-repeat;
+    }
+  }
+  .get-convert__input-wrapper-gbp{
+    padding-left: 70px;
+    position: relative;
+    &::before{
+      @extend %pseudo-flag;
+      background: url('../img/css_sprites.png') -0 -138px no-repeat;
+    }
+  }
+  &__image-select{
+    width: 30px;
+    height: 30px;
+    padding: 0 5px;
+  }
+  #select{
+    width: 20%;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    appearance: none;
+    background: url('../img/for_select.png') no-repeat right rgb(236, 230, 230);
+    padding: 3px;
+    box-shadow: 1px 1px 4px -1px rgb(0, 0, 0);
+  }
+  &__data-output{
+    padding: 50px 0 0 0;
+    input{
+      display: inline-block;
+      width: 70%;
+      margin: 15px auto;
+      height: 30px;
+      padding-left: 10px;
+      position: relative;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+    }
+    span{
+      padding: 0 10px 0 0;
+      font-size: 20px;
+    }
+  }
+}  
+
+noscript{
+  text-align: center;
+  display: block;
+}
+
+.copyright{
+  text-align: center;
+}
+
+// adaptive
+@media screen and (max-width: 600px) {
+  .wrapper{
+    width: 95%;
+    padding: 10px;
+  }
+  .get-convert{
+    padding: 50px 0;
+  }
+  .get-convert #select{
+    width: 40%;
+    background: #ece6e6;
+    appearance: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .get-convert #select{
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .get-convert #select{
+    appearance: none;
+  }
+}
+
+
