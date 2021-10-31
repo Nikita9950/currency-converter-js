@@ -1,5 +1,5 @@
 const rates = {}
-// элементы выводов
+
 const elementUSD = document.querySelector('[data-value="USD"]')
 const elementEUR = document.querySelector('[data-value="EUR"]')
 const elementGBP = document.querySelector('[data-value="GBP"]')
